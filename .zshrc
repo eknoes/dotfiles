@@ -18,16 +18,15 @@ antigen bundle <<EOBUNDLES
        	# Other	
 	command-not-found
 
-        # Fish-like auto suggestions
-        zsh-users/zsh-autosuggestions
-    	
 	# Statusbar
-	antigen bundle tobi-wan-kenobi/bumblebee-status.git bumblebee-status
+	tobi-wan-kenobi/bumblebee-status.git bumblebee-status
 
         # Extra zsh completions
 	zsh-users/zsh-completions
 EOBUNDLES
-    
+
+antigen bundle zsh-users/zsh-autosuggestions
+
 # Load the theme
 antigen theme PatTheMav/minimal2 minimal2
 
