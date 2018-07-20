@@ -20,7 +20,10 @@ antigen bundle <<EOBUNDLES
 
         # Fish-like auto suggestions
         zsh-users/zsh-autosuggestions
-    
+    	
+	# Statusbar
+	antigen bundle tobi-wan-kenobi/bumblebee-status.git bumblebee-status
+
         # Extra zsh completions
 	zsh-users/zsh-completions
 EOBUNDLES
