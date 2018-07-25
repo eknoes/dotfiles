@@ -1,7 +1,10 @@
 # Lines configured by zsh-newuser-install
 unsetopt autocd beep
 # End of lines configured by zsh-newuser-install
-source /usr/share/zsh-antigen/antigen.zsh
+
+[[ -a /usr/share/zsh-antigen/antigen.zsh ]] && source /usr/share/zsh-antigen/antigen.zsh
+[[ -a /usr/share/zsh/share/antigen.zsh ]] && source /usr/share/zsh/share/antigen.zsh
+	
 antigen use oh-my-zsh
 
 # POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k

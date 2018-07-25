@@ -1,0 +1,10 @@
+#!/bin/bash
+
+bumblebee_modules='nic disk:root cpu memory '
+if [ -e '/sys/class/power_supply/BATTERY0' ]; then 
+	bumblebee_modules+='battery '
+fi
+bumblebee_modules+='github date time pasink pasource'
+
+$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) -m $bumblebee_modules  -t solarized-powerline
+
