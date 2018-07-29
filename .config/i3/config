@@ -136,7 +136,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available) 
 bar { 
 	
-	font pango:Inconsolata 10, FontAwesome 11
+	font pango:Inconsolata 10, FontAwesome 10
+	position top
+	tray_output primary
 	status_command ~/.config/i3/statusbar
 #  status_command i3status 
 #  font pango:DejaVu Sans Mono, Awesome 8
@@ -154,4 +156,5 @@ client.focused #d70a53 #d70a53 #ffffff #8c0333
 client.focused_inactive #333333 #333333 #888888 #333333 
 client.unfocused #333333 #333333 #888888 #333333 
 client.urgent #eb709b #eb709b #ffffff #eb709b
-
+# Autostart
+exec dex -ae i3
