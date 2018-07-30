@@ -1,6 +1,11 @@
 #!/bin/bash
 
-bumblebee_modules='sensors '
+bumblebee_modules = ''
+
+if [ -e '/sys/class/thermal/thermal_zone0/temp' ]; then
+	bumblebee_modules+='sensors '
+fi
+
 
 if $(lspci -k | grep -q "GeForce"); then
 	bumblebee_modules+='nvidiagpu '

@@ -136,7 +136,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available) 
 bar { 
 	
-	font pango:Inconsolata 10, FontAwesome 10
+	font pango:Inconsolata 10, FontAwesome 10, DejaVu Sans Mono 10
 	position top
 	tray_output primary
 	status_command ~/.config/i3/statusbar
