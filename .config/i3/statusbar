@@ -1,11 +1,10 @@
 #!/bin/bash
 
-bumblebee_modules = ''
+bumblebee_modules=''
 
 if [ -e '/sys/class/thermal/thermal_zone0/temp' ]; then
 	bumblebee_modules+='sensors '
 fi
-
 
 if $(lspci -k | grep -q "GeForce"); then
 	bumblebee_modules+='nvidiagpu '
@@ -13,11 +12,16 @@ fi
 
 bumblebee_modules+='nic traffic cpu memory '
 
-if [ -e '/sys/class/power_supply/BATTERY0' ]; then 
+if [ -e '/sys/class/power_supply/BAT0' ]; then 
 	bumblebee_modules+='battery '
 fi
 
-bumblebee_modules+='github date time pasink pasource'
+bumblebee_modules+='github date time pasink pasource '
+
+if [ -e '/sys/class/backlight/intel_backlight/brightness' ]; then
+	bumblebee_modules+='brightness '
+fi
 
 $(find ~/.antigen | grep /bumblebee-status/bumblebee-status) -m $bumblebee_modules  -t solarized-powerline
+#$(find ~/Projekte | grep /bumblebee-status/bumblebee-status) -d -m $bumblebee_modules  -t solarized-powerline
 
