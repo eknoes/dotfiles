@@ -32,7 +32,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 # Load the theme
 antigen theme PatTheMav/minimal2 minimal2
-
 # Tell antigen that you're done
 antigen apply
+
+prompt_minimal2_setup
 alias config='/usr/bin/git --git-dir=/home/soenke/.cfg/ --work-tree=/home/soenke'
