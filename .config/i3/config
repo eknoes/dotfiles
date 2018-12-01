@@ -172,3 +172,6 @@ exec dex -ae i3
 
 # Take a screenshot upon pressing $mod+x (select an area)
 bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
+
+# Show passwords
+bindsym $mod+p exec python ~/.config/scripts/pass-dmenu.py
