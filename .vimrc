@@ -29,8 +29,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'cburroughs/pep8.py'
+Plugin 'nvie/vim-flake8'
+Plugin 'ervandew/supertab'
 " Bundle 'Valloric/YouCompleteMe'
 
 " End vundle
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Call Flake8 on Python Save
+autocmd BufWritePost *.py call Flake8()

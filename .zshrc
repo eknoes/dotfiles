@@ -37,3 +37,4 @@ antigen apply
 
 prompt_minimal2_setup
 alias config='/usr/bin/git --git-dir=/home/soenke/.cfg/ --work-tree=/home/soenke'
+export PIP_REQUIRE_VIRTUALENV=true
