@@ -10,7 +10,7 @@ if $(lspci -k | grep -q "GeForce"); then
 	bumblebee_modules+='nvidiagpu '
 fi
 
-bumblebee_modules+='nic traffic cpu memory '
+bumblebee_modules+='traffic cpu memory '
 
 if [ -e '/sys/class/power_supply/BAT0' ]; then 
 	bumblebee_modules+='battery '
@@ -22,6 +22,6 @@ if [ -e '/sys/class/backlight/intel_backlight/brightness' ]; then
 	bumblebee_modules+='brightness '
 fi
 
-$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) -m $bumblebee_modules  -t solarized-powerline
-#$(find ~/Projekte | grep /bumblebee-status/bumblebee-status) -d -m $bumblebee_modules  -t solarized-powerline
+#$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) -m $bumblebee_modules  -t solarized-powerline
+$(find ~/Projekte | grep /bumblebee-status/bumblebee-status) -d -m $bumblebee_modules  -t solarized-powerline
 
