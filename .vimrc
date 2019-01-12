@@ -7,7 +7,7 @@ set shiftwidth=4
 set expandtab
 
 " Line numbers
-" set nu
+set nu
 
 set encoding=utf-8
 syntax on
@@ -29,8 +29,20 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'lervag/vimtex'
+Plugin 'scrooloose/syntastic'
 " Bundle 'Valloric/YouCompleteMe'
 
 " End vundle
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
