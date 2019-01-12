@@ -7,7 +7,7 @@ set shiftwidth=4
 set expandtab
 
 " Line numbers
-" set nu
+set nu
 
 set encoding=utf-8
 syntax on
