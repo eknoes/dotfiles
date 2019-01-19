@@ -1,3 +1,6 @@
+# Add Android SDK to $PATH
+export PATH=$PATH:"/opt/android-sdk/platform-tools"
+
 # Lines configured by zsh-newuser-install
 unsetopt autocd beep
 # End of lines configured by zsh-newuser-install
