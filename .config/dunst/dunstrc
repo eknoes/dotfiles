@@ -17,7 +17,7 @@
 
     follow = keyboard
 
-    startup_notification = yes
+    startup_notification = no
 
     idle_threshold = 60
     sticky_history = no
@@ -38,7 +38,7 @@
     mouse_middle_click = close_all
 
     dmenu = /usr/bin/rofi -dmenu
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/firefox 
 
     corner_radius = 3
 
