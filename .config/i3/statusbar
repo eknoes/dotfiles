@@ -22,6 +22,12 @@ if [ -e '/sys/class/backlight/intel_backlight/brightness' ]; then
 	bumblebee_modules+='brightness '
 fi
 
-#$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) -m $bumblebee_modules  -t solarized-powerline
-$(find ~/Projekte | grep /bumblebee-status/bumblebee-status) -d -m $bumblebee_modules  -t solarized-powerline
+# If repo is on computer, use development version
+if [ -f ~/Projekte/bumblebee-status ]; then
+    bumblebee_cmd=$(find ~/Projekte | grep /bumblebee-status/bumblebee-status) 
+else
+    bumblebee_cmd=$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) 
+fi
+
+$bumblebee_cmd -m $bumblebee_modules  -t solarized-powerline
 
