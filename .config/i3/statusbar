@@ -29,5 +29,5 @@ else
     bumblebee_cmd=$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) 
 fi
 
-$bumblebee_cmd -m $bumblebee_modules  -t solarized-powerline
+$bumblebee_cmd -m $bumblebee_modules -p github.token=$(cat ~/.github_token) -t solarized-powerline
 
