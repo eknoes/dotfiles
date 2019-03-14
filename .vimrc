@@ -30,7 +30,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin list
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'tmhedberg/SimpylFold'
+" Plugin 'tmhedberg/SimpylFold'
 Plugin 'cburroughs/pep8.py'
 Plugin 'nvie/vim-flake8'
 Plugin 'ervandew/supertab'
@@ -70,3 +70,6 @@ endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 let g:vimtex_view_automatic = 1 " Opens PDF
 let g:vimtex_view_general_viewer = "evince"
+
+" Handle pdf_tex as Latex
+autocmd BufEnter *.pdf_tex :setlocal filetype=latex
