@@ -158,16 +158,16 @@ bar {
 #    separator #444444 
 #    background #222222 
 #    statusline #666666 
-#    focused_workspace #d70a53 #d70a53 #ffffff 
-#    active_workspace #333333 #333333 #888888 
-#    inactive_workspace #333333 #333333 #888888 
-#    urgent_workspace #eb709b #eb709b #ffffff 
+#    focused_workspace #e74c3c #e74c3c #ECF0F1 
+#    active_workspace #2C3E50 #2C3E50 #888888 
+#    inactive_workspace #2C3E50 #2C3E50 #888888 
+#    urgent_workspace #E70C3C #E70C3C #ECF0F1 
 #  } 
 } 
-client.focused #d70a53 #d70a53 #ffffff #8c0333 
-client.focused_inactive #333333 #333333 #888888 #333333 
-client.unfocused #333333 #333333 #888888 #333333 
-client.urgent #eb709b #eb709b #ffffff #eb709b
+client.focused #e74c3c #e74c3c #ECF0F1 #E74C3C 
+client.focused_inactive #3498DB #3498DB #ECF0F1 #3498DB
+client.unfocused #2C3E50 #2C3E50 #ECF0F1 #2C3E50 
+client.urgent #E70C3C #E70C3C #ECF0F1 #E70C3C
 # Autostart
 exec dex -ae i3
 
