@@ -22,6 +22,8 @@ if [ -e '/sys/class/backlight/intel_backlight/brightness' ]; then
 	bumblebee_modules+='brightness '
 fi
 
+bumblebee_modules+='dunst '
+
 # If repo is on computer, use development version
 if [ -d ~/Projekte/bumblebee-status ]; then
     bumblebee_cmd=~/Projekte/bumblebee-status/bumblebee-status 
