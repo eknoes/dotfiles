@@ -172,7 +172,7 @@ client.urgent #E70C3C #E70C3C #ECF0F1 #E70C3C
 exec dex -ae i3
 
 # Take a screenshot upon pressing $mod+x (select an area)
-bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
+bindsym --release $mod+x exec --no-startup-id import $HOME/Bilder/Screenshots/screenshot_$(date --iso-8601=seconds).png
 
 # Show passwords
 bindsym $mod+p exec python ~/.config/scripts/pass-dmenu.py
