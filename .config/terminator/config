@@ -8,14 +8,11 @@
     [[[window0]]]
       parent = ""
       type = Window
-
 [plugins]
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
-    title_transmit_bg_color = "#E74C3C"
   [[light]]
-    title_transmit_bg_color = "#E74C3C"
     background_color = "#fdf6e3"
     cursor_color = "#aaaaaa"
     foreground_color = "#657b83"
