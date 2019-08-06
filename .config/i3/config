@@ -176,3 +176,7 @@ bindsym --release $mod+x exec --no-startup-id import $HOME/Bilder/Screenshots/sc
 
 # Show passwords
 bindsym $mod+p exec python ~/.config/scripts/pass-dmenu.py
+
+# Show search
+bindsym $mod+t exec ~/.config/scripts/web-search.sh leo
+bindsym $mod+g exec ~/.config/scripts/web-search.sh google
