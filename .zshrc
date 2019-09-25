@@ -41,3 +41,14 @@ antigen apply
 prompt_minimal2_setup
 alias config='/usr/bin/git --git-dir=/home/soenke/.cfg/ --work-tree=/home/soenke'
 export PIP_REQUIRE_VIRTUALENV=true
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+
+XKB_DEFAULT_LAYOUT=de QT_WAYLAND_FORCE_DPI=physical QT_QPA_PLATFORM=wayland-egl CLUTTER_BACKEND=wayland SDL_VIDEODRIVER=wayland BEMENU_BACKEND=wayland exec sway
+
+fi
+
+export MOZ_ENABLE_WAYLAND=1
+export DISPLAY=$WAYLAND_DISPLAY
+export QT_QPA_PLATFORM=wayland-egl
+export SDL_VIDEODRIVER=wayland
