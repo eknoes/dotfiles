@@ -137,7 +137,7 @@ mode "resize" {
 bindsym $mod+r mode "resize" 
 
 # Suspend + Lock Menu
-bindsym $mod+l exec swaylock
+bindsym $mod+l exec ~/.config/scripts/lock.sh
 set $mode_system System (l) lock, (e)xit, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id dm-tool lock, mode "default"
@@ -190,13 +190,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute alsa_input.pci-0000_06_00.6.analog-stereo toggle # mute micro
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 # Autostart
 exec nextcloud
 exec waybar
 exec blueman-applet
+exec nm-applet
 
 # Show search
 # bindsym $mod+t exec ~/.config/scripts/web-search.sh leo
