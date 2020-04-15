@@ -22,7 +22,7 @@ if [ -e '/sys/class/backlight/intel_backlight/brightness' ]; then
 	bumblebee_modules+='brightness '
 fi
 
-bumblebee_modules+='dunst '
+bumblebee_modules+='bluetooth '
 
 # If repo is on computer, use development version
 if [ -d ~/Projekte/bumblebee-status ]; then
@@ -31,5 +31,5 @@ else
     bumblebee_cmd=$(find ~/.antigen | grep /bumblebee-status/bumblebee-status) 
 fi
 
-$bumblebee_cmd -m $bumblebee_modules -p github.token=$(cat ~/.github_token) -t flat-powerline
+bumblebee-status -m $bumblebee_modules -p github.token=$(cat ~/.github_token) -t powerline
 

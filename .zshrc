@@ -1,5 +1,6 @@
 # Add Android SDK to $PATH
 export PATH=$PATH:"/opt/android-sdk/platform-tools"
+export PATH=$PATH:"/opt/flutter/bin"
 
 # Lines configured by zsh-newuser-install
 unsetopt autocd beep
@@ -43,12 +44,11 @@ alias config='/usr/bin/git --git-dir=/home/soenke/.cfg/ --work-tree=/home/soenke
 export PIP_REQUIRE_VIRTUALENV=true
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-
-XKB_DEFAULT_LAYOUT=de QT_WAYLAND_FORCE_DPI=physical QT_QPA_PLATFORM=wayland-egl CLUTTER_BACKEND=wayland SDL_VIDEODRIVER=wayland BEMENU_BACKEND=wayland exec sway
+unset DISPLAY
+_JAVA_AWT_WM_NONREPARENTING=1 MOZ_ENABLE_WAYLAND=1 XKB_DEFAULT_LAYOUT=de QT_WAYLAND_FORCE_DPI=96 QT_QPA_PLATFORM=wayland-egl CLUTTER_BACKEND=wayland SDL_VIDEODRIVER=wayland BEMENU_BACKEND=wayland exec sway
 
 fi
 
-export MOZ_ENABLE_WAYLAND=1
-export DISPLAY=$WAYLAND_DISPLAY
-export QT_QPA_PLATFORM=wayland-egl
-export SDL_VIDEODRIVER=wayland
+
+export QT_WAYLAND_FORCE_DPI=96
+#export DISPLAY=$WAYLAND_DISPLAY

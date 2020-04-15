@@ -8,7 +8,7 @@ set expandtab
 
 " Line numbers
 set nu
-
+set shell=bash
 set encoding=utf-8
 syntax on
 
@@ -25,12 +25,11 @@ call vundle#begin()
 " "call vundle#begin('~/some/path/here')
 
 " " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/vundle.vim'
 
 " Plugin list
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-" Plugin 'tmhedberg/SimpylFold'
 Plugin 'cburroughs/pep8.py'
 Plugin 'nvie/vim-flake8'
 Plugin 'ervandew/supertab'
@@ -39,6 +38,7 @@ Plugin 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Chiel92/vim-autoformat'
 
 " End vundle
 call vundle#end()            " required

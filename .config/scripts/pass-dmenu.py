@@ -25,7 +25,7 @@ from os.path import join as joinpath
 
 
 SEARCHPATH=normpath(expanduser("~/.password-store"))
-DMENU_OPTIONS=["-dmenu","-p", "Password:", "-i", "-l", "35"]
+DMENU_OPTIONS=["-i","-l", "10", "-p", "Password:"]
 PASS_OPTIONS=["-c"]
 
 
@@ -52,7 +52,7 @@ def main():
 
     # launch dmenu
     try:
-        result = subprocess.check_output(["rofi"] + DMENU_OPTIONS, input=pws_str.encode())
+        result = subprocess.check_output(["bemenu"] + DMENU_OPTIONS, input=pws_str.encode())
 
     except subprocess.CalledProcessError as e:
         print("dmenu returned code %d. Output was: %s" % (e.returncode, e.output), file=sys.stderr)
