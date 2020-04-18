@@ -201,6 +201,8 @@ exec nextcloud
 exec blueman-applet
 exec nm-applet --indicator
 exec swaybg -i Nextcloud/Bilder/2019-09\ Rätikon/20190903_201745.jpg
+exec xrdb -load ~/.Xresources
+
 # Show search
 # bindsym $mod+t exec ~/.config/scripts/web-search.sh leo
 # bindsym $mod+g exec ~/.config/scripts/web-search.sh google

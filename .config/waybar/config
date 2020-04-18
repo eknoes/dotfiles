@@ -1,5 +1,5 @@
 {
-    "layer": "bottom", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -79,7 +79,7 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected",
-        "format-alt": "{ifname}:  {bandwidthUpOctets}  {bandwidthDownOctets}",
+        "format-alt": "{ifname}:  {bandwidthUpBits}  {bandwidthDownBits}",
         "on-click-middle": "$HOME/.config/scripts/nmcli-bemenu-wifi.sh"
     },
     "pulseaudio": {
