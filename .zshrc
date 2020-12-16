@@ -2,6 +2,9 @@
 export PATH=$PATH:"/opt/android-sdk/platform-tools"
 export PATH=$PATH:"/opt/flutter/bin"
 
+# Alias nvim
+alias vim='nvim'
+
 # Lines configured by zsh-newuser-install
 unsetopt autocd beep
 # End of lines configured by zsh-newuser-install
@@ -42,13 +45,17 @@ antigen apply
 prompt_minimal2_setup
 alias config='/usr/bin/git --git-dir=/home/soenke/.cfg/ --work-tree=/home/soenke'
 export PIP_REQUIRE_VIRTUALENV=true
+export PATH=/home/soenke/Projects/sway/build/sway:/home/soenke/Projects/sway/build/swaymsg:$PATH
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 unset DISPLAY
-_JAVA_AWT_WM_NONREPARENTING=1 MOZ_ENABLE_WAYLAND=1 XKB_DEFAULT_LAYOUT=de QT_WAYLAND_FORCE_DPI=96 QT_QPA_PLATFORM=wayland-egl CLUTTER_BACKEND=wayland SDL_VIDEODRIVER=wayland BEMENU_BACKEND=wayland exec sway -d 2> ~/.local/sway/$(date -Iseconds).log
+#SWAYBIN=/home/soenke/Projects/sway/build/sway/sway
+SWAYBIN=sway
+_JAVA_AWT_WM_NONREPARENTING=1 MOZ_ENABLE_WAYLAND=1 XKB_DEFAULT_LAYOUT=de QT_WAYLAND_FORCE_DPI=96 QT_QPA_PLATFORM=wayland-egl CLUTTER_BACKEND=wayland SDL_VIDEODRIVER=wayland BEMENU_BACKEND=wayland exec $SWAYBIN
 
 fi
 
-
+alias dig='echo "You want to use drill instead"'
+alias nslookup='echo "You want to use drill instead"'
 export QT_WAYLAND_FORCE_DPI=96
 #export DISPLAY=$WAYLAND_DISPLAY

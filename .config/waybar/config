@@ -6,13 +6,19 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "custom/vpn", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "custom/vpn", "custom/github", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
     // Modules configuration
     "custom/vpn": {
         "exec-if": "test $(nmcli --fields NAME,TYPE connection show --active | awk -F '[ ]{2,}' '$2 ~ /vpn/ {print $1}' | wc -l) -eq 1",
         "interval": 5,
         "exec": "nmcli --fields NAME,TYPE connection show --active | awk -F '[ ]{2,}' '$2 ~ /vpn/ {print $1}'",
         "format": "{}  🔒"
+    },
+    "custom/github": {
+        "interval": 60,
+        "exec": "curl -su eknoes:$(cat ~/.github_token) https://api.github.com/notifications | jq '. | length'",
+        "format": "{} ",
+        "on-click": "firefox https://github.com/notifications"
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"

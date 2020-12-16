@@ -78,7 +78,8 @@ window#waybar.chromium {
 #mode,
 #idle_inhibitor,
 #mpd,
-#custom-vpn {
+#custom-vpn,
+#custom-github {
     padding: 0 10px;
     margin: 0 4px;
     color: #ffffff;
@@ -96,6 +97,10 @@ window#waybar.chromium {
 #battery.charging {
     color: #ffffff;
     background-color: #26A65B;
+}
+
+#custom-github {
+    background-color: rgb(36, 41, 46);
 }
 
 @keyframes blink {
