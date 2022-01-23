@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux LTS" --loader /vmlinuz-linux-lts --unicode 'initrd=\amd-ucode.img initrd=\initramfs-linux-lts.img quiet acpi_backlight=vendor thinkpad-acpi.brightness_enable=0 rd.luks.name=04a87ba9-bfad-4787-9290-53602a7c50ef=cryptlvm rd.luks.options=timeout=0 rootflags=x-systemd.device-timeout=0 root=/dev/volgrp0/root resume=/dev/volgrp0/swap amd_iommu=on iommu=pt'
+sudo efibootmgr --disk /dev/nvme0n1 --part 1 --create --label "Arch Linux" --loader /vmlinuz-linux --unicode 'initrd=\amd-ucode.img initrd=\initramfs-linux.img quiet acpi_backlight=vendor thinkpad-acpi.brightness_enable=0 rd.luks.name=04a87ba9-bfad-4787-9290-53602a7c50ef=cryptlvm rd.luks.options=timeout=0 rootflags=x-systemd.device-timeout=0 root=/dev/volgrp0/root resume=/dev/volgrp0/swap amd_iommu=on iommu=pt
+'
