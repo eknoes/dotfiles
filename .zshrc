@@ -1,6 +1,21 @@
 # Add Android SDK to $PATH
 export PATH=$PATH:"/opt/android-sdk/platform-tools"
 export PATH=$PATH:"/opt/flutter/bin"
+export PATH=$PATH:"/home/soenke/bin"
+
+# Jetbrains JDK      
+export IDEA_JDK=/usr/lib/jvm/jre-jetbrains
+export PHPSTORM_JDK=/usr/lib/jvm/jre-jetbrains
+export WEBIDE_JDK=/usr/lib/jvm/jre-jetbrains
+export PYCHARM_JDK=/usr/lib/jvm/jre-jetbrains
+export RUBYMINE_JDK=/usr/lib/jvm/jre-jetbrains
+export CL_JDK=/usr/lib/jvm/jre-jetbrains
+export DATAGRIP_JDK=/usr/lib/jvm/jre-jetbrains
+export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
+export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
+
+# Master thesis
+alias btfuzz="cargo run --"
 
 # Alias nvim
 alias vim='nvim'
@@ -49,3 +64,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 alias dig='echo "You want to use drill instead"'
 alias nslookup='echo "You want to use drill instead"'
 export QT_WAYLAND_FORCE_DPI=96
+PATH="$HOME/.node_modules/bin:$PATH"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+#export npm_config_prefix=~/.node_modules
