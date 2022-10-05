@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -z ${IMAGE+x} ]; then IMAGE=/home/soenke/Projects/thesis/guestimage; fi
+
+scp -i $IMAGE/stretch.id_rsa -P 10021 -o "StrictHostKeyChecking no" "$@"

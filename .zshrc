@@ -16,7 +16,7 @@ export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
 export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
 
 # Master thesis
-alias btfuzz="cargo run --"
+alias btfuzz="cargo run --release --"
 
 # Alias nvim
 alias vim='nvim'
@@ -69,3 +69,4 @@ PATH="$HOME/.node_modules/bin:$PATH"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 #export npm_config_prefix=~/.node_modules
+setopt +o nomatch
