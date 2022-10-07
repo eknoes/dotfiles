@@ -16,7 +16,8 @@ export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
 export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
 
 # Master thesis
-alias btfuzz="cargo run --release --"
+export IMAGE="/home/soenke/Projects/thesis/guestimage/bullseye.img"
+export QEMU="/home/soenke/Projects/qemu/build/qemu-system-x86_64"
 
 # Alias nvim
 alias vim='nvim'

@@ -1,0 +1,2 @@
+#!/bin/bash
+cargo run --manifest-path /home/soenke/Projects/thesis/toothbreaker/Cargo.toml --package=toothbreaker-replay --release -- "$@"
