@@ -1,5 +1,5 @@
 #!/bin/bash
 
-if [ -z ${IMAGE+x} ]; then IMAGE=/home/soenke/Projects/thesis/guestimage; fi
+if [ -z ${IMAGE+x} ]; then IMAGE=/home/soenke/Projects/thesis/guestimage/bullseye; fi
 
-scp -i $IMAGE/bullseye.id_rsa -P 10021 -o "StrictHostKeyChecking no" "$@"
+scp -i $IMAGE.id_rsa -P 10021 -o "StrictHostKeyChecking no" "$@"

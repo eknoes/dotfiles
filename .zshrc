@@ -16,7 +16,7 @@ export GOLAND_JDK=/usr/lib/jvm/jre-jetbrains
 export STUDIO_JDK=/usr/lib/jvm/jre-jetbrains
 
 # Master thesis
-export IMAGE="/home/soenke/Projects/thesis/guestimage/bullseye.img"
+export IMAGE="/home/soenke/Projects/thesis/guestimage/bullseye"
 export QEMU="/home/soenke/Projects/qemu/build/qemu-system-x86_64"
 
 # Alias nvim
